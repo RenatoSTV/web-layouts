@@ -259,19 +259,8 @@ header .login-search .search .circle img {
 }
 
 .category-image {
-  left: 68rem;
-  bottom: 33rem;
-}
-
-.category-image {
   width: 48rem;
   height: 41rem;
-
-  /* left: 56rem;
-  bottom: 13rem;
-
-  left: 86rem;
-  bottom: 41rem; */
 
   position: absolute;
 
@@ -279,61 +268,50 @@ header .login-search .search .circle img {
   align-items: center;
   justify-content: center;
 
-
+  visibility: hidden;
+  left: 50rem;
+  bottom: 11rem;
 }
 
-.category-image.in{
-    animation-name: imageIn;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-  
+.category-image#show {
+  visibility: visible;
+  animation-name: imageIn;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
-
 
 @keyframes imageIn {
   0% {
-    left: 80rem;
-    bottom: 35rem;
     opacity: 0;
-    transform: translate(150px);
   }
 
   100% {
-    left: 50rem;
-    bottom: 11rem;
     opacity: 1;
-    transform: translate(150px);
   }
 }
 
-.category-image.out{
+.category-image#showOff {
   animation-name: imageOut;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-
 }
 
 @keyframes imageOut {
   0% {
-    left: 50rem;
-    bottom: 11rem;
     opacity: 1;
-    transform: translate(150px);
   }
 
   100% {
-    left: 30rem;
-    bottom: -5rem;
     opacity: 0;
-    transform: translate(150px);
   }
 }
 
 .category-image img {
   object-fit: contain;
 }
+
 .ring {
   width: 57rem;
   height: 57rem;
@@ -363,8 +341,10 @@ header .login-search .search .circle img {
   display: flex;
   align-items: center;
 
-  margin-left: 50px;
-  margin-top: 100px;
+  position: fixed;
+
+  bottom: 2rem;
+  left: 4rem;
 }
 
 .social-medias .facebook,
@@ -372,12 +352,18 @@ header .login-search .search .circle img {
 .social-medias .instagram {
   background-color: #ffffff;
 
-  width: 20px;
-  height: 20px;
+  width: 2rem;
+  height: 2rem;
 
   border-radius: 50%;
 
   margin-right: 10px;
+}
+
+.social-medias .facebook:hover,
+.social-medias .twitter:hover,
+.social-medias .instagram:hover {
+  cursor: pointer;
 }
 
 .circle {
