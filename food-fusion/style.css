@@ -276,7 +276,7 @@ header .login-search .search .circle img {
 .category-image#show {
   visibility: visible;
   animation-name: imageIn;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
