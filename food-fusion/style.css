@@ -23,8 +23,6 @@ header {
   width: 80vw;
   height: 100px;
 
-  margin-right: auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -106,8 +104,6 @@ header .login-search .search .circle img {
 
 .main {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 .main .left {
@@ -256,11 +252,13 @@ header .login-search .search .circle img {
 .right {
   font-size: 20rem;
   position: relative;
+  left: 60rem;
+  bottom: 37rem;
 }
 
 .category-image {
-  width: 48rem;
-  height: 41rem;
+  width: 30rem;
+  height: 30rem;
 
   position: absolute;
 
@@ -269,14 +267,14 @@ header .login-search .search .circle img {
   justify-content: center;
 
   visibility: hidden;
-  left: 50rem;
-  bottom: 11rem;
+  left: 47rem;
+  bottom: 7rem;
 }
 
 .category-image#show {
   visibility: visible;
   animation-name: imageIn;
-  animation-duration: 1s;
+  animation-duration: 0.7s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -291,9 +289,9 @@ header .login-search .search .circle img {
   }
 }
 
-.category-image#showOff {
+.category-image{
   animation-name: imageOut;
-  animation-duration: 2s;
+  animation-duration: 0.7s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -313,16 +311,14 @@ header .login-search .search .circle img {
 }
 
 .ring {
-  width: 57rem;
-  height: 57rem;
+  width: 45rem;
+  height: 45rem;
   border-radius: 50%;
   background-color: #ff6767;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  position: absolute;
 
   left: 78rem;
   bottom: 2rem;
@@ -380,4 +376,10 @@ header .login-search .search .circle img {
   margin-right: 20px;
 
   cursor: pointer;
+}
+
+@media(min-width:500px) {
+  .left{
+    margin-left: 0;
+  }
 }
