@@ -25,7 +25,7 @@ for (let i = 0; i < categories.length; i++) {
             bgImageCategory[i].classList.add('active')
 
             categoryImg.setAttribute('id', 'show')
-            categoryImg.querySelector("img").src = `assets/${categoryId}.png`
+            categoryImg.querySelector("img").src = `https://s1.imghub.io/${categoryId}.png`
         })
     })
 }

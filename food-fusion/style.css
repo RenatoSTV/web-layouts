@@ -17,11 +17,21 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   height: 100vh;
   position: relative;
+
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: url('./assets/ring.svg');
+  background-repeat:no-repeat;
+  background-position: 130% 40%;
+  background-size: 47%;
 }
 
 header {
-  width: 80vw;
-  height: 100px;
+  width: 90vw;
+  height: 10vh;
 
   display: flex;
   align-items: center;
@@ -68,6 +78,11 @@ header .tabs {
 
 header .tabs a {
   margin: 0 10px;
+  transition: 0.3s;
+}
+
+header .tabs a:hover {
+  color: #FF6767;
 }
 
 header .login-search {
@@ -103,21 +118,26 @@ header .login-search .search .circle img {
 }
 
 .main {
+  height: 90vh;
   position: relative;
+  display: flex;
 }
 
 .main .left {
+  width: 50%;
+
   margin-left: 50px;
   margin-top: 80px;
 
   display: flex;
   flex-direction: column;
 
+  justify-content:space-between;
   justify-items: flex-start;
 }
 
 .main .left .content {
-  width: 500px;
+  width: 30vw;
 
   display: flex;
   flex-direction: column;
@@ -141,13 +161,14 @@ header .login-search .search .circle img {
 .main .left .options {
   display: flex;
   align-items: center;
+  margin-bottom: 50px;
 }
 
-.main .left .container {
+.main .left .options .container {
   width: 80px;
   height: 140px;
 
-  margin: 0 10px;
+  margin-right: 10px;
 
   border-radius: 50px;
 
@@ -160,18 +181,18 @@ header .login-search .search .circle img {
   justify-content: space-between;
 }
 
-.main .left .container:first-child {
+.main .left .options .container:first-child {
   margin-left: 0;
 }
 
-.main .left .container:hover,
-.main .left .container.active {
+.main .left .options .container:hover,
+.main .left .options .container.active {
   background-color: #f2b05e;
 
   cursor: pointer;
 }
 
-.main .left .container .sub-container {
+.main .left .options .container .sub-container {
   width: 70px;
   height: 70px;
 
@@ -186,22 +207,22 @@ header .login-search .search .circle img {
   justify-content: center;
 }
 
-.main .left .container .sub-container.active {
+.main .left .options .container .sub-container.active {
   background-color: #ffffff;
 }
 
-.main .left .container .sub-container img {
+.main .left .options .container .sub-container img {
   width: 50px;
 }
 
-.main .left .container p {
+.main .left .options .container p {
   margin-bottom: 20px;
 
   font-weight: bold;
 }
 
 .main .left .zip-code {
-  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .main .left .zip-code .input {
@@ -249,26 +270,21 @@ header .login-search .search .circle img {
   height: 30%;
 }
 
-.right {
-  font-size: 20rem;
-  position: relative;
-  left: 60rem;
-  bottom: 37rem;
+.main .right {
+  width: 50%;
+  display:flex;
+  align-items: center;
+  justify-content:flex-start;
 }
 
 .category-image {
-  width: 30rem;
-  height: 30rem;
-
-  position: absolute;
+  width: 35vw;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   visibility: hidden;
-  left: 47rem;
-  bottom: 7rem;
 }
 
 .category-image#show {
@@ -310,37 +326,11 @@ header .login-search .search .circle img {
   object-fit: contain;
 }
 
-.ring {
-  width: 45rem;
-  height: 45rem;
-  border-radius: 50%;
-  background-color: #ff6767;
 
+.social-medias {
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  left: 78rem;
-  bottom: 2rem;
-}
-
-.ring .inside-circle {
-  width: 80%;
-  height: 80%;
-
-  border-radius: 50%;
-
-  background-color: #f2e5d5;
-}
-
-.main .social-medias {
-  display: flex;
-  align-items: center;
-
-  position: fixed;
-
-  bottom: 2rem;
-  left: 4rem;
+  margin-bottom: 20px;
 }
 
 .social-medias .facebook,
