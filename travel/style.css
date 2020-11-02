@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #111111;
+  overflow: hidden;
+}
+
+body {
+  background-color: white;
+  height: 100vh;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+#main {
+  width: 100vw;
+  height: 100vh;
+
+  background: url("./assets/vector_image_background.svg") no-repeat 80%;
+}
+
+.header {
+  height: 10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 24px 37px;
+
+  background-color: #8fbf93;
+}
+
+.header .logo {
+  font-size: 36px;
+  font-weight: bold;
+
+  color: #fff;
+}
+
+.header .navbar {
+  display: flex;
+  align-items: center;
+}
+
+.header .navbar a {
+  margin-left: 40px;
+}
+
+.header .navbar a,
+.header .navbar p {
+  font-size: 16;
+  color: #fff;
+}
+
+.header .navbar .loginBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 16px;
+  margin-left: 40px;
+
+  background-color: #8c5651;
+  border-radius: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.wrapper {
+    height: 100%;
+  margin: auto 0;
+  margin-left: 62px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  position: relative;
+}
+
+.wrapper .primary-text h1 {
+  font-size: 53px;
+  font-weight: bold;
+}
+
+.wrapper .primary-text h3 {
+    font-size: 29px;
+    font-weight: 300;
+}
+
+.wrapper .secondary-text p {
+    font-size: 16px;
+    color: #777;
+}
+
+.wrapper .places .countrys span {
+    width: 15px;
+    height: 25px;
+}
