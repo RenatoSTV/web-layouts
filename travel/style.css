@@ -20,10 +20,11 @@ body {
   height: 100vh;
 
   background: url("./assets/vector_image_background.svg") no-repeat 80%;
+  background-size: 65%;
 }
 
 .header {
-  height: 10%;
+  height: 10vh;
 
   display: flex;
   align-items: center;
@@ -52,7 +53,7 @@ body {
 
 .header .navbar a,
 .header .navbar p {
-  font-size: 16;
+  font-size: 16px;
   color: #fff;
 }
 
@@ -62,7 +63,7 @@ body {
   justify-content: center;
 
   padding: 8px 16px;
-  margin-left: 40px;
+  margin-left: 50px;
 
   background-color: #8c5651;
   border-radius: 16px;
@@ -71,7 +72,7 @@ body {
 }
 
 .wrapper {
-    height: 100%;
+  height: 90vh;
   margin: auto 0;
   margin-left: 62px;
 
@@ -82,22 +83,103 @@ body {
   position: relative;
 }
 
+.wrapper .primary-text {
+  margin-top: 11vh;
+}
+
 .wrapper .primary-text h1 {
   font-size: 53px;
   font-weight: bold;
 }
 
 .wrapper .primary-text h3 {
-    font-size: 29px;
-    font-weight: 300;
+  font-size: 29px;
+  font-weight: 300;
+  margin-top: 8px;
+}
+
+.wrapper .secondary-text {
+  margin-top: 50px;
 }
 
 .wrapper .secondary-text p {
-    font-size: 16px;
-    color: #777;
+  font-size: 1.4rem;
+  color: #777;
 }
 
-.wrapper .places .countrys span {
-    width: 15px;
-    height: 25px;
+.wrapper .packages-button {
+  width: 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 16px;
+  margin-top: 32px;
+
+  border-radius: 0 20px 20px 20px;
+
+  background-color: #8c5651;
+}
+
+.wrapper .packages-button a {
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+.wrapper .places {
+  margin-top: 64px;
+}
+
+.wrapper .places .famous-places h3 {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.wrapper .places .famous-places p {
+  font-size: 1.2rem;
+  color: #939393;
+}
+
+.wrapper .places .select-countrys {
+  display: flex;
+  align-items: center;
+
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.wrapper .places .select-countrys .countrys {
+  width: 28vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  align-items: flex-end;
+}
+
+.wrapper .places .select-countrys .countrys .country {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper .places .select-countrys .countrys .country img {
+  width: 100%;
+}
+
+.wrapper .places .select-countrys .countrys .country h1 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.wrapper .places span {
+  background-image: url(./assets/arrow-right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  width: 45px;
+  height: 45px;
+  margin-left: 25px;
+  cursor: pointer;
 }
