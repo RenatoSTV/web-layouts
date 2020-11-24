@@ -20,7 +20,7 @@ body {
   height: 100vh;
 
   background: url("./assets/vector_image_background.svg") no-repeat 80%;
-  background-size: 65%;
+  background-size: 60%;
 }
 
 .header {
@@ -36,8 +36,9 @@ body {
 }
 
 .header .logo {
-  font-size: 36px;
+  font-size: 46px;
   font-weight: bold;
+  margin-left: 22px;
 
   color: #fff;
 }
@@ -48,13 +49,29 @@ body {
 }
 
 .header .navbar a {
-  margin-left: 40px;
+  margin: 10px 20px
 }
 
 .header .navbar a,
 .header .navbar p {
   font-size: 16px;
-  color: #fff;
+  color: #ffffff;
+}
+
+@keyframes up {
+  from {
+    bottom: 0; right:0;
+  }
+  to {
+    bottom: 10px; right: -10px;
+  }
+}
+
+.header .navbar a:hover {
+  animation-name: up;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  position: relative;
 }
 
 .header .navbar .loginBtn {
@@ -150,11 +167,40 @@ body {
 }
 
 .wrapper .places .select-countrys .countrys {
+  display: flex;
+  align-items: flex-end;
+}
+
+@keyframes next {
+  0% {
+    opacity: 0;
+    left: 500px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+.wrapper .places .select-countrys .countrys .setCountries {
   width: 28vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  padding: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  display: none;
   gap: 50px;
   align-items: flex-end;
+  border-radius: 8px;
+  animation-duration: 0.8s;
+  position: absolute;
+  bottom: 75px;
+  visibility: hidden;
+  transition-property: hidden;
+}
+
+.wrapper .places .select-countrys .countrys .setCountries.active {
+  display: grid;
+  visibility: visible;
+  animation-name: next;
 }
 
 .wrapper .places .select-countrys .countrys .country {
@@ -182,4 +228,7 @@ body {
   height: 45px;
   margin-left: 25px;
   cursor: pointer;
+  position: absolute;
+  bottom: 150px;
+  left: 550px;
 }

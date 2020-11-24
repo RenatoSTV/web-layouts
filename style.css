@@ -72,14 +72,18 @@ header .links a:hover {
 .projects .project-card {
     width: 20rem;
     height: 15rem;
-    margin: 0 3rem;
+    justify-self: center;
 
     border: 0.1rem solid #111111;
     border-radius: 0.8rem;
 }
 
-.projects .project-card:hover {
+.projects .project-card.foodfusion:hover {
     border: 0.1rem solid #F27777;
+}
+
+.projects .project-card.travel:hover {
+  border: 0.1rem solid #8fbf93;
 }
 
 .projects .project-card .project-link{
